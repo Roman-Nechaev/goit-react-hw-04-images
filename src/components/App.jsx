@@ -34,9 +34,13 @@ export function App() {
 
     const fetchData = async () => {
       try {
-        setIsLoading(true);
         setIsLoadingSpinner(true);
         setBtnVision(true);
+
+        if (pageNum === 1) {
+          setIsLoading(true);
+        }
+
         const response = await fetchImage(search, pageNum);
 
         setImages(prevImage => [...prevImage, ...response.hits]);
