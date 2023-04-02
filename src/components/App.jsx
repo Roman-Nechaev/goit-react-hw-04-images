@@ -19,11 +19,13 @@ export function App() {
   const [images, setImages] = useState([]);
   const [pageNum, setPageNum] = useState(1);
   const [error, setError] = useState(null);
+
+  const [btnVision, setBtnVision] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
+  const [isLoadingSpinner, setIsLoadingSpinner] = useState(false);
+
   const [showModal, setShowModal] = useState(false);
   const [modalImg, setModalImg] = useState(null);
-  const [btnVision, setBtnVision] = useState(true);
-  const [isLoadingSpinner, setIsLoadingSpinner] = useState(false);
 
   useEffect(() => {
     if (!search) {
