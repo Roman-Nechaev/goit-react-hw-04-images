@@ -99,7 +99,7 @@ export function App() {
 
         {images && (
           <ImageGallery
-            images={images}
+            items={images}
             onClick={toggleModal}
             onUpdateModalPicture={updateModalPicture}
           />
