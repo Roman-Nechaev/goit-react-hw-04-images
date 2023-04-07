@@ -5,7 +5,7 @@ import { errorEmptyInput } from 'components/Error/emptyInput';
 import PropTypes from 'prop-types';
 
 import {
-  ConteinerBar,
+  ContainerBar,
   Button,
   LabelBtn,
   Input,
@@ -23,7 +23,7 @@ export const Searchbar = ({ onSubmit }) => {
   };
 
   return (
-    <ConteinerBar>
+    <ContainerBar>
       <Formik initialValues={{ text: '' }} onSubmit={handleSubmit}>
         {({ isSubmitting }) => (
           <FormsSt>
@@ -41,7 +41,7 @@ export const Searchbar = ({ onSubmit }) => {
           </FormsSt>
         )}
       </Formik>
-    </ConteinerBar>
+    </ContainerBar>
   );
 };
 

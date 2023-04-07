@@ -8,12 +8,12 @@ const modalRoot = document.querySelector('#modal-root');
 
 export function Modal({ onGiveImg, onClose }) {
   useEffect(() => {
-    const hendleKeyDown = e => {
+    const handleKeyDown = e => {
       if (e.code === 'Escape') {
         onClose();
       }
     };
-    window.addEventListener('keydown', hendleKeyDown);
+    window.addEventListener('keydown', handleKeyDown);
   }, [onClose]);
 
   const handleBackdropClick = e => {
